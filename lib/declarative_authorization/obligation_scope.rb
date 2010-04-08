@@ -42,7 +42,7 @@ module Authorization
   # +@proxy_options[:joins] = { :bar => { :baz => :foo } }
   # @proxy_options[:conditions] = [ 'foos_bazzes.attr = :foos_bazzes__id_0', { :foos_bazzes__id_0 => 1 } ]+
   #
-  class ObligationScope < ActiveRecord::NamedScope::Scope
+  class ObligationScope < ActiveRecord::Relation
     def initialize (model, options)
       @finder_options = {}
       super(model, options)
